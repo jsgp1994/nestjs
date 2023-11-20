@@ -59,7 +59,8 @@ export class ProductsService {
 
   delete(id: number) {
     const index = this.productIndext(id);
-    return this.products.slice(index, 1);
+    this.products.splice(index, 1);
+    return this.products;
   }
 
   productIndext(id: number) {
